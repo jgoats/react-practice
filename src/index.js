@@ -1,11 +1,30 @@
 import React from "react";
 import ReactDom from "react-dom";
+import Cost from "./expenses/expenses.js";
 
-export default function App() {
+function App() {
+    const expenses = [
+        {
+            title: "rent",
+            amount: 1200,
+        },
+        {
+            title: "food",
+            amount: 400
+        },
+        {
+            title: "gasoline",
+            amount: 100
+        }
+    ]
     return (
-        <div>Hello world</div>
+        <div>
+            <Cost title={expenses[0].title} amount={expenses[0].amount} />
+        </div>
     )
 }
+
+export default App;
 
 
 
